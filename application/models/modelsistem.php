@@ -24,7 +24,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 			return false; // Maka kembalikan hasilnya dengan FALSE
 	}
 
-	// Fungsi untuk melakukan simpan data ke tabel siswa
+	// Fungsi untuk melakukan simpan data ke tabel barang
 	public function save(){
 		$data = array(
 			"nama_barang" => $this->input->post('input_nama'),
@@ -35,7 +35,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 		$this->db->insert('barang', $data); // Untuk mengeksekusi perintah insert data
 	}
 
-	// Fungsi untuk melakukan ubah data berdasarkan ID siswa
+	// Fungsi untuk melakukan ubah data barang berdasarkan ID barang
 	public function edit($id_barang){
 		$data = array(
 			"nama_barang" => $this->input->post('input_nama'),
@@ -47,7 +47,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 		$this->db->update('barang', $data); // Untuk mengeksekusi perintah update data
 	}
 
-	// Fungsi untuk melakukan menghapus data siswa berdasarkan ID siswa
+	// Fungsi untuk melakukan menghapus data barang berdasarkan ID barang
 	public function delete($id_barang){
 		$this->db->where('id_barang', $id_barang);
 		$this->db->delete('barang'); // Untuk mengeksekusi perintah delete data
