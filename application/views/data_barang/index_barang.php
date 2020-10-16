@@ -171,10 +171,10 @@
 
 <!--
 -- Buat sebuah div dengan id="view" yang digunakan untuk menampung data
--- yang ada pada tabel petugas di database
+-- yang ada pada tabel barang di database
 -->
 <div id="view">
-    <?php $this->load->view('data_barang/view', array('model'=>$model)); // Load file view.php dan kirim data petugasnya ?>
+    <?php $this->load->view('data_barang/view', array('model'=>$model)); // Load file view.php dan kirim data barangnya ?>
     <button type="button" id="btn-tambah" data-toggle="modal" data-target="#form-modal" class="btn btn-success pull-right">
         <span class="glyphicon glyphicon-plus"></span> &nbsp;Tambah Data
     </button>
